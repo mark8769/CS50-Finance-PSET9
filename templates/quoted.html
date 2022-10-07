@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block title %}
+Quotes Page
+{% endblock %}
+
+{% block main %}
+<div>
+<!-- Make a table here when we get our values from lookup python functino (API CALL)-->
+
+<!-- Using bootstrap table, this one seems relatively straightforward, could implement on own? -->
+
+<!--    <td>{{ ticker_info["name"] }}</td>
+        <td>{{ ticker_info["price"] }}</td>
+        <td>{{ ticker_info["symbol"] }}</td>-->
+
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Row</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Symbol</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <!-- Jinja 2, good to start looking at ways to use programming knowledge -->
+        <!-- https://www.adamsmith.haus/python/answers/how-to-iterate-over-a-dictionary-in-a-jinja-template-in-python -->
+        {% for key, value in ticker_info.items() %}
+          <td>{{ value }}</td>
+        {% endfor %}
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+{% endblock %}

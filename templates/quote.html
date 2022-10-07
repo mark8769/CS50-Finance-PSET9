@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}
+Quotes Page
+{% endblock %}
+
+{% block main %}
+<div>
+    <!-- After submitting form, update the quote page with stock price and information-->
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" autocomplete="off" autofocus placeholder="Ticker Symbol" name="symbol">
+        </div>
+    </form>
+</div>
+{% endblock %}

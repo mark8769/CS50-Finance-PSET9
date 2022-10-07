@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Account History
+{% endblock%}
+
+{% block main %}
+<div>
+    <!-- Make a table here when we get our values from lookup python functino (API CALL)-->
+
+    <!-- Using bootstrap table, this one seems relatively straightforward, could implement on own? -->
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <!--Align first two columns to left edge, rest to right edge Do the same for corresponding rows in body-->
+            <!--stock, shares, current_price, total_holdings-->
+            <th clas="text-start" scope="col">Symbol</th>
+            <th class="text-start" scope="col">Shares</th>
+            <th class="text-end" scope="col">Price</th>
+            <th class="text-end" scope="col">Type</th>
+            <th class="text-end" scope="col">Date</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <!-- <th scope="row">1</th> Remove row number here -->
+            <!-- Jinja 2, good to start looking at ways to use programming knowledge -->
+            <!-- https://www.adamsmith.haus/python/answers/how-to-iterate-over-a-dictionary-in-a-jinja-template-in-python -->
+            {% for x in range(history_dicts | length) %}
+              <tr>
+                <td class="text-start">{{ history_dicts[x]["stock"] }}</td>
+                <td class="text-start">{{ history_dicts[x]["shares"] }}</td>
+                <td class="text-end">{{ history_dicts[x]["price"] }}</td>
+                <td class="text-end">{{ history_dicts[x]["type"] }}</td>
+                <td class="text-end">{{ history_dicts[x]["datetime"] }}</td>
+              </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+
+    </div>
+{% endblock %}

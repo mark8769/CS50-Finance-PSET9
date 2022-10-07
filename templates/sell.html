@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Sell Shares
+{% endblock %}
+
+{% block main %}
+    <!-- Using inspect element to see how harvard cs50 instructors did it -->
+    <!-- mx-auto (x denotes to set padding on both right and left side)-->
+    <!-- Auto lets bootstrap determine padding, guessing forms get smaller one -->
+    <!-- https://getbootstrap.com/docs/4.0/utilities/spacing/ -->
+
+    <form action="/sell" method="post">
+        <!-- mb-3 adds padding in between the div elements in this case-->
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" aria-label=".form-select-sm example" name="symbol">
+                <option disabled selected>Symbol</option>
+                {% for ticker in tickers %}
+                    <option value="{{ ticker|upper }}">{{ ticker|upper }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" autocomplete="off" autofocus name="shares" placeholder="Shares" type="number">
+        </div>
+
+        <input class="btn btn-primary" type="submit"></button>
+    </form>
+{% endblock %}
