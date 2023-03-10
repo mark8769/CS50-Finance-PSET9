@@ -74,3 +74,6 @@ flask run
 7. Project is hosted locally, flask will give you the address to use. Command + Clicking link is much easier than copying and pasting the url into your browser.
 
 
+# Demo
+
+![](readmeFiles/cs50finance.gif)
