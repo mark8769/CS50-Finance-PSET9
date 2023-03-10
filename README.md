@@ -50,7 +50,7 @@ python -m venv ./venv
 2. Activate the virtual environment. (1st: Mac, 2nd: Windows)
 
 ```
-source venv/bin/activate
+source environment_name/bin/activate
 ```
 
 ```
