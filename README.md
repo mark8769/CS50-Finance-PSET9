@@ -1,4 +1,4 @@
-# PURPOSE
+# Purpose
 
 The purpose of CS50's Finance lab is to simulate the buying and selling of stocks in the stock market.
 Users can register with a username and password. Once signed up, users are given 10,000$ to buy a stock
