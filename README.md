@@ -25,9 +25,13 @@ The remaining files in this project are:
 
 # How to run
 
-1. Clone project git clone https://github.com/mark8769/CS50-Finance-PSET9
+1. Clone the project 
 
-2. Create a python virtual environment inside project. (1st: Mac, 2nd: Windows)
+```
+git clone https://github.com/mark8769/CS50-Finance-PSET9
+```
+
+2. Create a python virtual environment inside the project. (1st: Mac, 2nd: Windows)
 
 ```
 python3 -m virtualenv venv
@@ -37,7 +41,7 @@ python3 -m virtualenv venv
 python -m venv ./venv
 ```
 
-2. Activate virtual environment. (1st: Mac, 2nd: Windows)
+2. Activate the virtual environment. (1st: Mac, 2nd: Windows)
 
 ```
 source venv/bin/activate
@@ -47,13 +51,13 @@ source venv/bin/activate
 .\venv\Scripts\activate
 ```
 
-3. Install required libraries.
+3. Install the required libraries.
 
 ```
 pip3 install -r requirements.txt
 ```
 
-4. Create an account to create an API key here https://iexcloud.io/cloud-login#/ (free 30-days)
+4. Create an account here https://iexcloud.io/cloud-login#/ This is to get the api key required to run the project. (Free 30 days)
 
 5. In terminal in the project directory run:
 
@@ -61,7 +65,7 @@ pip3 install -r requirements.txt
 export API_KEY=your_free_api_key_here
 ```
 
-6. Start the application inside the project folder in your terminal:
+6. Start the application inside the project directory.
 
 ```
 flask run
