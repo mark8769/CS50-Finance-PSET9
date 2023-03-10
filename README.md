@@ -5,7 +5,7 @@ Users can register with a username and password. Once signed up, users are given
 at the current market prices. Users can also sell their purchases stocks they bought at the current market prices.
 If users want to look at current prices, they can ask for a quote on the quotes navigation link. On the home page, users can see all their purchased stocks and the money they have left. Users also have the option to see their purchase history from the history navigation link.
 
-# CONTENTS
+# Contents
 
 This project consists of two folders, static, and templates.
 
@@ -23,5 +23,50 @@ The remaining files in this project are:
 
 4. requirements.txt: Contains all the python libraries needed to run this project.
 
-# HOW TO RUN
+# How to run
+
+1. Clone project git clone https://github.com/mark8769/CS50-Finance-PSET9
+
+2. Create a python virtual environment inside project. (1st: Mac, 2nd: Windows)
+
+```
+python3 -m virtualenv venv
+```
+
+```
+python -m venv ./venv
+```
+
+2. Activate virtual environment. (1st: Mac, 2nd: Windows)
+
+```
+source venv/bin/activate
+```
+
+```
+.\venv\Scripts\activate
+```
+
+3. Install required libraries.
+
+```
+pip3 install -r requirements.txt
+```
+
+4. Create an account to create an API key here https://iexcloud.io/cloud-login#/ (free 30-days)
+
+5. In terminal in the project directory run:
+
+```
+export API_KEY=your_free_api_key_here
+```
+
+6. Start the application inside the project folder in your terminal:
+
+```
+flask run
+```
+
+7. Project is hosted locally, flask will give you the address to use. Command + Clicking link is much easier than copying and pasting the url into your browser.
+
 
