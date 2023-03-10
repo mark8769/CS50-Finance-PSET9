@@ -37,8 +37,10 @@ git clone https://github.com/mark8769/CS50-Finance-PSET9
 
 2. Create a python virtual environment inside the project. (1st: Mac, 2nd: Windows)
 
+(Python virtual environments)[https://docs.python.org/3/tutorial/venv.html]
+
 ```
-python3 -m virtualenv venv
+python3 -m venv environment_name
 ```
 
 ```
