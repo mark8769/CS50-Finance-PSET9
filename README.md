@@ -17,9 +17,9 @@ The remaining files in this project are:
 
 1. app.py: Handles all the routing for the pages using flask.
 
-2. helpers.py: Contains functions that handle 404 page, formatting, login functions, and a function that makes the api calls to [IEXCloud](https://iexcloud.io/cloud-login#/).
+2. helpers.py: Contains functions that handle 404 page, formatting, login, and api calls to [IEXCloud](https://iexcloud.io/cloud-login#/).
 
-3. finance.db: Sqlite database file, contains all the information for users, and their accounts.
+3. finance.db: Sqlite database file, contains all the information for users accounts.
 
 4. requirements.txt: Contains all the python libraries needed to run this project.
 
