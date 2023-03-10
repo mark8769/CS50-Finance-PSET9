@@ -1,3 +1,7 @@
+# Quick Demo
+
+![](readmeFiles/cs50finance.gif)
+
 # Purpose
 
 The purpose of CS50's Finance lab is to simulate the buying and selling of stocks in the stock market.
@@ -72,8 +76,3 @@ flask run
 ```
 
 7. Project is hosted locally, flask will give you the address to use. Command + Clicking link is much easier than copying and pasting the url into your browser.
-
-
-# Demo
-
-![](readmeFiles/cs50finance.gif)
