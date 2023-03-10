@@ -2,7 +2,7 @@
 
 The purpose of CS50's Finance lab is to simulate the buying and selling of stocks in the stock market.
 Users can register with a username and password. Once signed up, users are given 10,000$ to buy a stock
-at the current market prices. Users can also sell their purchases stocks they bought at the current market prices.
+at the current market prices. Users can also sell their purchased stocks they bought at the current market prices.
 If users want to look at current prices, they can ask for a quote on the quotes navigation link. On the home page, users can see all their purchased stocks and the money they have left. Users also have the option to see their purchase history from the history navigation link.
 
 # Contents
