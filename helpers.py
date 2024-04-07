@@ -1,7 +1,6 @@
 import os
-import requests
 import urllib.parse
-
+import requests
 from flask import redirect, render_template, request, session
 from functools import wraps
 
@@ -37,7 +36,6 @@ def login_required(f):
 
 def lookup(symbol):
     """Look up quote for symbol."""
-
     # Contact API
     try:
         api_key = os.environ.get("API_KEY")

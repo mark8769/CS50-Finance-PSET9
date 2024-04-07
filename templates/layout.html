@@ -63,6 +63,42 @@
             {% block main %}{% endblock %}
         </main>
 
+        <!-- Rasa chatbot on the right bottom corner -->
+        <div id="rasa-chat-widget" data-websocket-url="https://your-rasa-url-here/"></div>
+        <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
+        <!-- End of rasa chatbot UI -->
+
+        <!-- Script to communicate with rasa chatbot -->
+        <!-- https://github.com/botfront/rasa-webchat -->
+        <!-- https://www.youtube.com/watch?v=eJMT2FovZsM -->
+
+        <script>!(function () {
+            let e = document.createElement("script"),
+              t = document.head || document.getElementsByTagName("head")[0];
+            (e.src =
+              "https://cdn.jsdelivr.net/npm/rasa-webchat@3.0.4/lib/index.js"),
+              // Replace 1.x.x with the version that you want
+              (e.async = !0),
+              (e.onload = () => {
+                window.WebChat.default(
+                  {
+                    // something for when user first clicks on chatbot
+                    initPayload: '/greet',
+                    customData: { language: "en" },
+                    // use flask socket to communicate for now instead of localhost 8080
+                    socketUrl: "http://localhost:5005/",
+                    // add other props here
+                  },
+                  null
+                );
+              }),
+              t.insertBefore(e, t.firstChild);
+          })();
+          </script>
+
+        <!-- End of communication stuff with rasa chatbot -->
+
+
         <footer class="mb-5 small text-center text-muted">
             Data provided by <a href="https://iexcloud.io/">IEX</a>
         </footer>
