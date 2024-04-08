@@ -1,5 +1,5 @@
 FROM python:3.12.2-bullseye
-FROM --platform=linux/amd64 python:3.12.2-bullseye
+# FROM --platform=linux/amd64 python:3.12.2-bullseye
 # RUN ["mkdir", "app"]
 # RUN ["cd", "app/"]
 # Create a new dir "app" at root of container, and switch to it.
