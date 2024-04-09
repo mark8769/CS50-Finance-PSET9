@@ -1,16 +1,25 @@
-FROM python:3.12.2-bullseye
+# FROM python:3.12.2-bullseye
+# Linux x86-64
 # FROM --platform=linux/amd64 python:3.12.2-bullseye
-# RUN ["mkdir", "app"]
-# RUN ["cd", "app/"]
+
 # Create a new dir "app" at root of container, and switch to it.
 WORKDIR app
+
 # Copy all files from current dir to workdir in container
 COPY [".", "."]
+
 # Install all required python libraries
 RUN ["pip3", "install", "-r", "requirements.txt"]
+
+# Put your IEX API Key Here
 ENV API_KEY=YOUR_API_KEY_HERE
+
 # Run flask on port 8000 instead of default 5000
 ENV FLASK_RUN_PORT=8000
+
+# Denote to anyone that port 8000 is mean to be used
+EXPOSE 8000
+
 # CMD ["flask", "run"]
 # https://www.freecodecamp.org/news/how-to-dockerize-a-flask-app/
 # Have to pass --host even when though we use port mapping when using docker run (e.g -p 8000:8000)
